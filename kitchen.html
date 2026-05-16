@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KITCHEN ACCESSORIES</title>
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Kitchen Accessories</h1>
+        <p>Decorative Kitchen Accessories</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>KITCHEN STORAGE RACK</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTay0sc4gfur0gCdtbWLJAOJ3u2r-Zj9earcg&s" alt="Bed Sheet 1">
+            <div class="product-details">
+                <div class="product-price" data-price="2000">Price: 2000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('KITCHEN STORAGE RACK', 2000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>ELECTRONIC PANS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQURFJVNhQEBob9Qj0UDAc51hMGscjDfZtrFQ&sG" alt="Bed Sheet 2">
+            <div class="product-details">
+                <div class="product-price" data-price="1500">Price: 1500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ELECTRONIC PANS', 1500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>COOKING UTENSILS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVOjWJLs2tJg4hkSSkYS-hLjlId77AegnNZA&s" alt="Bed Sheet 3">
+            <div class="product-details">
+                <div class="product-price" data-price="1000">Price: 1000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('COOKING UTENSILS', 1000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>METALLIC PAN</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStyfRSxXUwYRRdTmsA3rDJfLHZ8cbNaHRpTQ&sG" alt="Bed Sheet 4">
+            <div class="product-details">
+                <div class="product-price" data-price="5000">Price: 5000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('METALLIC PAN', 5000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>STAINLESS STEEL KNIFEs HOLDER</h3>
+            <img src="https://apricot.com.pk/cdn/shop/products/6-PCs-Stainless-Steel-4292-Black-Knife-Set-Apricot-5368.jpg?v=1712067677&width=360" alt="Bed Sheet 5">
+            <div class="product-details">
+                <div class="product-price" data-price="700">Price: 700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('STAINLESS STEEL KNIFEs HOLDER', 700)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>SILVER PLATE RACKS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Showo-orXnZ9GuJrKlmOJYvQbVFHW3eMeg&s" alt="Bed Sheet 6">
+            <div class="product-details">
+                <div class="product-price" data-price="2000">Price: 2000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('SILVER PLATE RACKS', 2000)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+     function addToCart(productName, productPrice) {
+         let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+         cart.items.push({ name: productName, price: productPrice });
+         cart.total += productPrice;
+
+         localStorage.setItem('cart', JSON.stringify(cart));
+
+         alert(`${productName} added to the cart!`);
+     }
+    </script>
+</body>
+</html>

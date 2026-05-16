@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CROCERY AND CUTLERY</title>
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Crocery and cutlery</h1>
+        <p>Decorative Crocery and cutlerys</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>SILVER CUTLERY SET</h3>
+            <img src="https://homsstore.com/cdn/shop/files/IMG-7854_2024-05-23T06_37_13.087Z_400x.png?v=1716446477" alt="Bed Sheet 1">
+            <div class="product-details">
+                <div class="product-price" data-price="699">Price: 699 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('SILVER CUTLERY SET', 699)">Add to Cart</button>
+        </div>
+    <div class="product">
+        <h3>GREY FLORAL BREAKFAST SET</h3>
+        <img src="https://homsstore.com/cdn/shop/files/WhatsAppImage2023-08-22at1.51.24PM_1_400x.jpg?v=1692885045" alt="Bed Sheet 2">
+        <div class="product-details">
+            <div class="product-price" data-price="1199">Price: 1199 Rs</div>
+        </div>
+        <button class="cart-button" onclick="addToCart('GREY FLORAL BREAKFAST SET', 1199)">Add to Cart</button>
+    </div>
+        <div class="product">
+            <h3>CYCLE DESIGN GLASS BOWL</h3>
+            <img src="https://homsstore.com/cdn/shop/files/WAWZ1170_400x.jpg?v=1696930120" alt="Bed Sheet 3">
+            <div class="product-details">
+                <div class="product-price" data-price="499">Price: 499 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('CYCLE DESIGN GLASS BOWL', 499)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>COPPER AND SILVER LINES ICECREAM BOWL</h3>
+                <img src="https://homsstore.com/cdn/shop/files/WhatsAppImage2024-08-02at12.54.33PM_10_400x.jpg?v=1723285526" alt="Bed Sheet 4">
+                <div class="product-details">
+                    <div class="product-price" data-price="699">Price: 699 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('COPPER AND SILVER LINES ICECREAM BOWL', 699)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>SILVER TEA PLATE</h3>
+                <img src="https://homsstore.com/cdn/shop/files/WhatsAppImage2024-08-02at12.54.33PM_11_400x.jpg?v=1723285899" alt="Bed Sheet 5">
+                <div class="product-details">
+                    <div class="product-price" data-price="599">Price: 599 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('SILVER TEA PLATE', 599)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>RED LINE BOWL</h3>
+                <img src="https://homsstore.com/cdn/shop/files/WhatsAppImage2024-08-02at12.54.33PM_8_2000x.jpg?v=1723286389" alt="Bed Sheet 6">
+                <div class="product-details">
+                    <div class="product-price" data-price="399">Price: 399 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('RED LINE BOWL', 399)">Add to Cart</button>
+            </div>
+        </div>
+            <script>
+                function addToCart(productName, productPrice) {
+                    let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+                    cart.items.push({ name: productName, price: productPrice });
+                    cart.total += productPrice;
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+
+                    alert(`${productName} added to the cart!`);
+                }
+            </script>
+            <h2>Elevate Your Dining Experience with Our Crockery & Cutlery Collection</h2>
+            <h3>Premium Quality, Exceptional Design</h3>
+            <p>Experience the epitome of luxury dining with our meticulously crafted Crockery and Cutlery sets.</p>
+            <h3>Versatile Choices for Every Occasion</h3>
+            <p>From everyday family dinners to lavish parties, our collection features an array of designs to suit every setting.</p>
+            <h3>The Ultimate Crockery Set</h3>
+            <ul>
+                <li>Our Crockery Sets are not just functional; they're a statement of style and elegance.</li>
+                <li>Crafted from high-quality materials, each piece is designed to last.</li>
+            </ul>
+            <h3>Unmatched Cutlery Set</h3>
+            <p>Enhance your dining table's aesthetic with our Cutlery Sets that offer a blend of durability and design sophistication.</p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li><b>Lasting Durability:</b>Made from premium materials that are built to last.</li>
+                <li><b>Timeless Design:</b>The classic and contemporary designs are sure to complement any table setting.</li>
+                <li><b>Easy to Clean:</b>Our Crockery and Cutlery are dishwasher-safe, making cleanup a breeze.</li>
+                <li><b>Complete Your Set:</b> Mix and match pieces to create your perfect Crockery and Cutlery collection.</li>
+            </ul>
+            <h3>Why Choose Our Crockery & Cutlery Collection?</h3>
+            <ul>
+                <li>Our Crockery and Cutlery Sets are designed with attention to detail, ensuring you enjoy every meal in style.</li>
+                <li>Whether you're looking to upgrade your kitchenware or find the perfect gift, our collection has something for everyone</li>
+            </ul>
+</body>
+</html>

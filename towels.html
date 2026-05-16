@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Towels</title>
+ <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Towels</h1>
+        <p>Decorative Towels</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>ABSTRACT BLUE TOWELS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrb0HgZ9q6h30zhUyPwVFacLaSvMxl5aPKeA&s" alt="Bed Sheet 1">
+            <div class="product-details">
+                <div class="product-price" data-price="700">Price: 700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ABSTRACT BLUE TOWELS', 700)">Add to Cart</button>
+        </div>
+        <div class="product">\
+            <h3>TEXTURE DESIGN TOWEL</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?qtbn:ANd9GcS0l4sHt8nbsCd7tBi4w5Ccw3_EEwsIuWTLkA&s" alt="Bed Sheet 2">
+            <div class="product-details">
+                <div class="product-price" data-price="800">Price: 800 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('TEXTURE DESIGN TOWEL', 800)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>MULTICOLOR TOWEL</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK_fq3shK8VQVVzQWCEyQe0gaWWL0CPcKQrg&s" alt="Bed Sheet 3">
+            <div class="product-details">
+                <div class="product-price" data-price="1000">Price: 1000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('MULTICOLOR TOWEL', 1000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>TURKISH TOWEL</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgQZpsiMZQQWKFm8J3GCEd4-IWjufbPljLaQ&s" alt="Bed Sheet 4">
+            <div class="product-details">
+                <div class="product-price" data-price="800">Price: 800 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('TURKISH TOWEL', 800)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>COTTON TOWEL</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_gyk0gi6Y73A93h7WR7YBx_EVrpQkwvWi1w&s" alt="Bed Sheet 5">
+            <div class="product-details">
+                <div class="product-price" data-price="500">Price: 500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('COTTON TOWEL', 500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>ABSTRACT PINK TOWEL</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAuXQxbbzydF19Yspzo1_a8Cg6Xn331BBdwg&s" alt="Bed Sheet 6">
+            <div class="product-details">
+                <div class="product-price" data-price="700">Price: 700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('FISH STYLE MUG', 700)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+function addToCart(productName, productPrice) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+    cart.items.push({ name: productName, price: productPrice });
+    cart.total += productPrice;
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${productName} added to the cart!`);
+}
+    </script>
+</body>
+</html>

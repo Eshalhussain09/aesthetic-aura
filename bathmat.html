@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BATH MATS</title>
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Bath Mats</h1>
+        <p>Decorative Bath Mats</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>ABSTRACT PINK BATH MAT</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHz88r81D7D63nglybDN7i8NYHTQSR261HYA&s" alt="Bed Sheet 1">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="1200">Price: 1200 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ABSTRACT PINK BATH MAT', 1200)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>TEXTURE DESIGN BATH MAT</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkyRJeZrA8Yk_LMsDdtBxLYNsFgTcIzRy48Q&s" alt="Bed Sheet 2">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="1500">Price: 1500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('TEXTURE DESIGN BATH MAT', 1500)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>RAINBOW BATH MAT</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTpQqRcasjnZl3fsq9WCbHCjZBPeVwgBSB2Q&s" alt="Bed Sheet 3">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="2000">Price: 2000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('RAINBOW BATH MAT', 2000)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>DECORATIVE BATH MAT</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3floobEOZqebx7Q8CU_U6JtRAVYXrRwc89w&s" alt="Bed Sheet 4">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="1200">Price: `1200 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('DECORATIVE BATH MAT', 1200)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>FLOWER BATH MAT</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzXy6MyrFHTzB3Bf-KXPBl3312ifQ48Ur5Ng&s" alt="Bed Sheet 5">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="1700">Price: 1700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('FLOWER BATH MAT', 1700)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>MULTICOLOR BATH MAT</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvy4STxNVXi4oj6N4RKByQTpAkVvPMC9T9w&s" alt="Bed Sheet 6">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="700">Price: 700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('MULTICOLOR BATH MAT', 700)">Add to Cart</button>
+        </div>
+
+    </div>
+    <script>
+    function addToCart(productName, productPrice) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+        cart.items.push({ name: productName, price: productPrice });
+        cart.total += productPrice;
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        alert(`${productName} added to the cart!`);
+    }
+    </script>
+</body>
+</html>

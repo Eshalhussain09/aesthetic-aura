@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cushion Covers</title>
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Cushion Covers</h1>
+        <p>Decorative Cushion Covers</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>ABSTRACT BLUE CUSHION</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJGq0KeExlcFBYUXpc64opsnRi8DCf34Qi3Q&s" alt="Bed Sheet 1">
+            <div class="product-details">
+                <div class="product-price" data-price="1200">Price: 1200 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ABSTRACT BLUE CUSHION', 1200)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>TEXTURE DESIGN CUSHION</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhTEv6GjuJEBvFOtjZneAnOpD7ZcO2DMTgFw&s" alt="Bed Sheet 2">
+            <div class="product-details">
+                <div class="product-price" data-price="1500">Price: 1500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('TEXTURE DESIGN CUSHION', 1500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>SOFA CUSHION</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWX-QWzwkAJ5ZK7QTelzEcij5xR12C8fQ7xg&s" alt="Bed Sheet 3">
+            <div class="product-details">
+                <div class="product-price" data-price="1000">Price: 1000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('SOFA CUSHION', 1000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>DECORATIVE CUSHION</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQOcEQ7vSAm2hVGpKmxUkca5tFLhPBT1Nkgw&sG" alt="Bed Sheet 4">
+            <div class="product-details">
+                <div class="product-price" data-price="700">Price: 700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('DECORATIVE CUSHION', 700)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>COTTON CUSHION</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqVujPxIPA9aBSTMMjANHwf_J-HSs6TvLlw&s" alt="Bed Sheet 5">
+            <div class="product-details">
+                <div class="product-price" data-price="1000">Price: 1000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('COTTON CUSHION', 1000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>ABSTRACT GREEN CUSHION</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTsppqVix38xUH3XellC70P-3C5SkTgNNv0A&s" alt="Bed Sheet 6">
+            <div class="product-details">
+                <div class="product-price" data-price="2000">Price: 2000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ABSTRACT GREEN CUSHION', 2000)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+            cart.items.push({ name: productName, price: productPrice });
+            cart.total += productPrice;
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            alert(`${productName} added to the cart!`);
+        }
+    </script>
+</body>
+</html>

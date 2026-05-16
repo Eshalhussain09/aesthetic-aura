@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cushion Covers</title>
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Curtain & Parda Designs</h1>
+        <p>Decorative Curtains</p>
+    </div>
+        <div class="products">
+            <div class="product">
+                <h3>TAB TOP CURTAINS</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgLxShAKrtIanHhbCQKbj4iCt-dx-mzaPo1w&s" alt="Bed Sheet 1">
+                <div class="product-details">
+                    <div class="product-price" data-price="6999">Price: 6999 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('TAB TOP CURTAINS', 6999)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>EYELET CURTAINS</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnwK3Gwz5HtpCfsdoAAsIE9hVwWoGC5S6SpA&s" alt="Bed Sheet 2">
+                <div class="product-details">
+                    <div class="product-price" data-price="9999">Price: 9999 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('EYELET CURTAINS', 9999)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>VALANCE CURTAINS</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSbia10uRdhApTQlW2ASJq0UZxUJRLxhB4dA&s" alt="Bed Sheet 3">
+                <div class="product-details">
+                    <div class="product-price" data-price="12000">Price: 12,000 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('VALANCE CURTAINS', 12000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>CAFE CURTAINS</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6T88R41AUHzVVVQjMsW7iZuTbCpnAIGZVbw&s" alt="Bed Sheet 4">
+                <div class="product-details">
+                    <div class="product-price" data-price="8000">Price: 8000 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('CAFE CURTAINS', 8000)">Add to Cart</button>
+            </div>
+            <div class="product">
+
+                <h3>PANEL CURTAINS</h3>
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgY6Cq11g6yuMgxL57YL_986X14NbKnMULow&s" alt="Bed Sheet 5">
+                <div class="product-details">
+                    <div class="product-price" data-price="6999">Price: 6999 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('PANEL CURTAINS', 6999)">Add to Cart</button>
+            </div>
+            <div class="product">
+
+                <h3>SWAG CURTAINS</h3>
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBGCBjejKlqpkfqRpD68po81wxEprOF061xA&s" alt="Bed Sheet 6">
+                <div class="product-details">
+                    <div class="product-name">wodeen texture clock</div>
+                    <div class="product-price" data-price="5000">Price: 5000 Rs</div>
+                </div>
+                <button class="cart-button" onclick="addToCart('SWAG CURTAINS', 5000)">Add to Cart</button>
+
+            </div>
+        </div>
+        <script>
+            function addToCart(productName, productPrice) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+                cart.items.push({ name: productName, price: productPrice });
+                cart.total += productPrice;
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                alert(`${productName} added to the cart!`);
+            }
+        </script>
+        <h2>Transform Your Walls with the Best Wall Curtains Ideas from Homsstore</h2>
+        <p>Looking for the perfect way to give your bedroom a makeover? Look no further than Homsstore, the premier online destination for all your wall curtains needs in Pakistan! Our extensive collection of curtains and accessories has everything you need to transform any room in your home into a stylish and cozy retreat.</p>
+        <h2>Get the Best Wall Curtains Online in Pakistan, Delivered to Your Doorstep!</h2>
+        <p>At Homsstore, we make it easy to shop for curtains online in Pakistan. We offer a wide range of options, including double curtains, short curtains, and curtain sets, all at unbeatable prices. Whether you're looking for curtains in Faisalabad, Lahore, Karachi, or any other major city in Pakistan, we've got you covered with fast and reliable delivery right to your doorstep.</p>
+        <h2>Find the Perfect Parda Design for Your Home</h2>
+        <p>When it comes to curtains, finding the right parda design can make all the difference. That's why Homsstore offers an extensive selection of curtain designs for bedrooms, windows, and more, so you can find the perfect match for your home's decor. Plus, our curtains for blinds are the perfect solution for anyone looking to add privacy and style to their home.</p>
+        <h2>Discover the Best Curtains Brands in Pakistan</h2>
+        <p>Looking for the best curtains in Lahore or other cities in Pakistan? Homsstore has you covered with our curated selection of top-quality curtains from the best brands in the business. From blinder curtains to blinds curtains and everything in between, we've got everything you need to create a stylish and inviting home.</p>
+        <h2>Get up to 50% Off on the Best Curtains Online in Pakistan</h2>
+        <p>
+            At Homsstore, we believe that everyone deserves access to high-quality curtains at affordable prices. That's why we offer our customers incredible deals and discounts on our entire collection of curtains and accessories. Plus, with free delivery across Pakistan, you can shop with confidence knowing that you're getting the best value for your money.<br>
+            Transform your walls with the best wall curtains ideas from Homsstore today!
+        </p>
+</body>
+</html>

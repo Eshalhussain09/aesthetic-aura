@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>LAMPS</title>
+ <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Lamps</h1>
+        <p>Decorative Lamps</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>CRYSTAL TABLE LAMP</h3>
+            <img src="https://homsstore.com/cdn/shop/files/51q2wqU85SS._AC_UF894_1000_QL80_FMwebp_400x.webp?v=1715751208" alt="Bed Sheet 1">
+            <div class="product-details">
+                <div class="product-price" data-price="7000">Price: 7000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('CRYSTAL TABLE LAMP', 7000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>ROUND TABLE LAMP</h3>
+            <img src="https://homsstore.com/cdn/shop/files/H1ef094518fac4dc7ada869a5f15574ce0_jpg_640x640Q90_jpg_400x.webp?v=1715751020" alt="Bed Sheet 2">
+            <div class="product-details">
+                <div class="product-price" data-price="6000">Price: 6000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ROUND TABLE LAMP', 6000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>MARBLE LAMP</h3>
+            <img src="https://homsstore.com/cdn/shop/files/S51476e1de90e4853824a40c62d6ecee8t_jpg_640x640Q90_jpg_400x.webp?v=1715693857" alt="Bed Sheet 3">
+            <div class="product-details">
+                <div class="product-price" data-price="6500">Price: 6500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('MARBLE LAMP', 6500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>DECORATIVE LAMP</h3>
+            <img src="https://homsstore.com/cdn/shop/files/H94a1640d58df49efaad6fabe81867acfy_jpg_640x640Q90_jpg_400x.webp?v=1715689605" alt="Bed Sheet 4">
+            <div class="product-details">
+                <div class="product-price" data-price="8000">Price: 8000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('DECORATIVE LAMP', 8000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>BLACK TOWER LAMP</h3>
+            <img src="https://homsstore.com/cdn/shop/files/Primrose-Black-Table-Lamp-marble-brass-three-shade-colours_400x.jpg?v=1689583286" alt="Bed Sheet 5">
+            <div class="product-details">
+                <div class="product-price" data-price="9000">Price: 9000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('BLACK TOWER LAMP', 9000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>LUKE TABLE LAMP</h3>
+            <img src="https://homsstore.com/cdn/shop/products/61uDyFBVMpL._AC_SL1500_400x.jpg?v=1670332861" alt="Bed Sheet 6">
+            <div class="product-details">
+                <div class="product-price" data-price="10000">Price: 10,000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('LUKE TABLE LAMP', 10000)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+  function addToCart(productName, productPrice) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+      cart.items.push({ name: productName, price: productPrice });
+      cart.total += productPrice;
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      alert(`${productName} added to the cart!`);
+  }
+    </script>
+    <h3>Illuminate your Home with Homsstore's Online Lamps Collection in Pakistan</h3>
+    <p>Looking for the perfect lighting solution to elevate your home decor? Look no further than Homsstore's Lamps collection in Pakistan. We offer a wide range of table lamps, floor lamps, chandeliers, and more to suit every style and budget.</p>
+    <h3>Table Lamps for Every Room</h3>
+    <p>Our table lamps come in a variety of designs, from sleek and modern to rustic and traditional. Whether you're looking for a bedside lamp to read by or a statement piece for your living room, we have you covered. Check out our selection of table lampshades to add an extra touch of style.</p>
+    <h3>Floor Lamps to Brighten up your Space</h3>
+    <p>Our floor lamps are perfect for adding ambient lighting to any room in your home. Choose from a variety of styles, including tripod lamps, arc lamps, and more. Our standing lamps are great for adding a decorative touch to your living space while providing functional lighting.</p>
+    <h3>Study Lamps to Boost Productivity</h3>
+    <p>Need a study lamp to help you focus during long hours of work or study? Check out our selection of study table lamps, available at competitive prices. Our lamps for bedroom and room lamps will add the perfect ambiance to your living spaces.</p>
+    <h3>Affordable and High-Quality Lamps</h3>
+    <p>At Homsstore, we believe that good lighting should be accessible to everyone. That's why we offer lamps at affordable prices without compromising on quality. With our lamps designs, you'll surely find the perfect fit for your home or office.</p>
+    <h3>Shop our Lamps Collection Online in Pakistan</h3>
+    <p>With free delivery and up to 50% off, shopping for lamps online in Pakistan has never been easier. We deliver to all major cities in Pakistan, including Karachi, Lahore, and Islamabad. Browse our selection of lamps today and discover the perfect lighting solution for your home or office.</p>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BATHROOM ACCESSORIES</title>
+    <link rel="stylesheet" href="styleProducts.css">
+
+</head>
+<body>
+   
+    <div class="page-title">
+        <h1>BATHROOM ACCESSORIES</h1>
+        <p>Decorative Cushion Covers</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>CORIAN BATH SET</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4wTvFLStSn00LJ2DCdfU-i3sF0K-urxCjDA&s" alt="Bathset 1">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="1000">Price: 1000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('CORIAN BATH SET', 1000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>ROUND WHITE BATH SET</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmbkKjqArdigwY7RImVms9hDOEfCZ2nxl15A&s" alt="Bathset 2">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="500">Price: 500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ROUND WHITE BATH SET', 500)">Add to Cart</button>
+        </div>
+        <div class="product">
+
+            <h3>WHITE MARBLE BATH SET</h3>
+            <img src="https://www.homeobsession.co/cdn/shop/products/bathroom_set_round_line_1_2048x.jpg?v=1571082978" alt="Bed Sheet 3">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="300">Price: 300 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('WHITE MARBLE BATH SET', 300)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>BLACK MARBLE BATH SET</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ51ZbTI9awhkWzk_bQ0ZmbdnLwGuvYWaF2Ag&s" alt="Bed Sheet 4">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="500">Price: 500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('BLACK MARBLE BATH SET', 500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>ROUND BEIGE BATH SET</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTs2PYRtD-mCpePW-a11BTf5g4Mzeb0eg_0w&s" alt="Bed Sheet 5">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="600">Price: 600 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ROUND BEIGE BATH SET', 600)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>SEA-SHELL BATHROOM SET</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3lcm4X6Ys5O9I6Q5Ht1LAOLM_u8SMXWH4Lw&s" alt="Bed Sheet 6">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="700">Price: 700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('SEA-SHELL BATHROOM SET', 700)">Add to Cart</button>
+        </div>
+
+    </div>
+    <script>
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+            cart.items.push({ name: productName, price: productPrice });
+            cart.total += productPrice;
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            alert(`${productName} added to the cart!`);
+        }
+    </script>
+    <h2>Upgrade Your Bathroom with Stylish Accessories</h2>
+    <p>Welcome to our collection page of bathroom accessories, where you'll find an extensive range of high-quality and stylish products to enhance the look and functionality of your bathroom. </p>
+    <h2>Affordable Bathroom Set Prices in Pakistan</h2>
+    <p>At Homsstore, we offer a wide range of bathroom accessories on Sale at Upto 50% off, to suit all styles and budgets. Sometime our prices drop even further so don't forget to checkout our Sale Collection to find unbeatable bathroom set prices in Pakistan.Our collection includes soap dishes, lotion dispensers, soap dispensers, brush holders, and ceramic bathroom accessories, all designed to complement a wide range of bathroom designs.</p>
+    <h2>Complete Your Bathroom with the Perfect Set</h2>
+    <p>We understand that finding the right bathroom accessories can be challenging, Homsstore has one of the biggest collection of bathroom accessories online in Pakistan. Our bath sets come in a variety of sizes and colors, including marble, ceramic and plastic bath sets, making it easy to find the perfect set to match your bathroom decor.</p>
+    <h2>Shop Online for Bathroom Accessories in Pakistan</h2>
+    <p>Shopping for bathroom accessories online in Pakistan has never been easier. Our collection of bathroom accessories is available to shop online, making it convenient for you to find the perfect accessories for your bathroom from the comfort of your own home. We deliver all across Pakistan including major cities like Lahore, Karachi and Islamabad.</p>
+    <h2>Add Functionality and Style to Your Bathroom</h2>
+    <p>
+        Our bathroom accessories are not only stylish but also practical. We offer everything from lotion dispensers and soap dishes to brush holders and soap dispensers, making it easy for you to add functionality and style to your bathroom.
+        <br>
+        Shop our collection now to find the perfect bathroom accessories for your home.
+    </p>
+    <footer>
+        <p>&copy; 2024 Aesthetic Aura. All rights reserved.</p>
+    </footer>
+</body>
+</html>

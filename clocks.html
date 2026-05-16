@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WALL CLOCKS</title>
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Aesthetic Aura</div>
+        </nav>
+    </header>
+    <div class="page-title">
+        <h1>Wall Clocks</h1>
+        <p>Decorative Wall Clocks</p>
+    </div>
+        <div class="product">
+            <h3>METAL GOLDEN CLOCK</h3>
+            <img src="https://homsstore.com/cdn/shop/products/image_5e6de921-a36b-48a4-869b-fceaef54924c_400x.jpg?v=1671537143" alt="Bed Sheet 1">
+            <div class="product-details">
+                <div class="product-price" data-price="500">Price: 500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('METAL GOLDEN CLOCK', 500)">Add to Cart</button>
+            </div>
+                <div class="product">
+                    <h3>WHITE BORDER CLOCK</h3>
+                    <img src="https://homsstore.com/cdn/shop/files/image_244e6ceb-d8d8-40f3-a6b1-673fd72664cf_400x.jpg?v=1683103134" alt="Bed Sheet 2">
+                    <div class="product-details">
+                        <div class="product-price" data-price="399">Price: 399 Rs</div>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('WHITE BORDER CLOCK, 399)">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <h3>GREY SKELETON CLOCK</h3>
+                        <img src="https://homsstore.com/cdn/shop/products/27_7bb4794c-ff5f-4f18-9769-52afd5b7d13c_400x.jpg?v=1579862833" alt="Bed Sheet 3">
+                        <div class="product-details">
+                            <div class="product-price" data-price="499">Price: 499 Rs</div>
+                        </div>
+                        <button class="cart-button" onclick="addToCart('GREY SKELETON CLOCK', 499)">Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <h3>CLOCK AND KEY HOLDER</h3>
+                            <img src="https://homsstore.com/cdn/shop/files/image_07b1f2a3-676c-44c8-8d96-7abcdada50b5_400x.jpg?v=1683096337" alt="Bed Sheet 4">
+                            <div class="product-details">
+                                <div class="product-price" data-price="499">Price: 499 Rs</div>
+                            </div>
+                            <button class="cart-button" onclick="addToCart('CLOCK AND KEY HOLDER', 499)">Add to Cart</button>
+                            </div>
+                        <div class="product">
+                            <h3>DEER WALL CLOCK</h3>
+                            <img src="https://homsstore.com/cdn/shop/files/image_cda271e1-ffb1-4b53-8c8f-fa5c128da78e_400x.jpg?v=1683096422" alt="Bed Sheet 5">
+                            <div class="product-details">
+                                <div class="product-price" data-price="599">Price: 599 Rs</div>
+                            </div>
+                            <button class="cart-button" onclick="addToCart('DEER WALL CLOCK', 599)">Add to Cart</button>
+                           </div>
+                            <div class="product">
+                                <h3>WOODEN TEXTURE CLOCK</h3>
+                                <img src="https://homsstore.com/cdn/shop/files/image_d2ebe364-2340-4bca-b4fa-6b7088adc434_400x.jpg?v=1683097896" alt="Bed Sheet 6">
+                                <div class="product-details">
+                                    <div class="product-price" data-price="699">Price: 699 Rs</div>
+                                </div>
+                                <button class="cart-button" onclick="addToCart('WOODEN TEXTURE CLOCK', 699)">Add to Cart</button>
+
+                        </div>
+                                <script>
+                                    function addToCart(productName, productPrice) {
+                                        let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+                                        cart.items.push({ name: productName, price: productPrice });
+                                        cart.total += productPrice;
+
+                                        localStorage.setItem('cart', JSON.stringify(cart));
+
+                                        alert(`${productName} added to the cart!`);
+                                    }
+                                </script>
+</body>
+</html>

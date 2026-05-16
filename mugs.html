@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>MUGS</title>
+ <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>MUGS</h1>
+        <p>Multipurpose Mugs</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>SHINNY EMBROSSED LINE CUPS</h3>
+            <img src="https://homsstore.com/cdn/shop/files/WhatsAppImage2023-08-22at1.51.16PM_2_400x.jpg?v=1692881619" alt="Bed Sheet 1">
+            <div class="product-details">
+                <div class="product-price" data-price="999">Price: 999 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('SHINNY EMBROSSED LINE CUPS', 999)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>CUP WITH COASTER</h3>
+            <img src="https://homsstore.com/cdn/shop/files/image_ed5cd075-92fc-42c9-9651-bda0f22c775a_400x.jpg?v=1683529453" alt="Bed Sheet 2">
+            <div class="product-details">
+                <div class="product-price" data-price="1200">Price: 1200 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('CUP WITH COASTER', 1200)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>SPARKLING MUG</h3>
+            <img src="https://homsstore.com/cdn/shop/files/VUQR7017_400x.jpg?v=1696594678" alt="Bed Sheet 3">
+            <div class="product-details">
+                <div class="product-price" data-price="800">Price: 800 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('SPARKLING MUG', 800)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>COFFEE MUG</h3>
+            <img src="https://homsstore.com/cdn/shop/files/DIBU6830_400x.jpg?v=1696654056" alt="Bed Sheet 3">
+            <div class="product-details">
+                <div class="product-price" data-price="2500">Price: 2500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('COFFEE MUG', 2500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>MUG WITH PLASTIC LID</h3>
+            <img src="https://homsstore.com/cdn/shop/products/DSC_0711_569c5201-4210-4dfa-b0bd-eab4107fc0ce_400x.jpg?v=1523618216" alt="Bed Sheet 5">
+            <div class="product-details">
+                <div class="product-price" data-price="1000">Price: 1000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('MUG WITH PLASTIC LID', 1000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>FISH STYLE MUG</h3>
+            <img src="https://homsstore.com/cdn/shop/products/DSC_0667_dde3521f-987f-47db-a749-b5a23b5f158c_400x.jpg?v=1571905334" alt="Bed Sheet 6">
+            <div class="product-details">
+                <div class="product-price" data-price="700">Price: 700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('FISH STYLE MUG', 700)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+function addToCart(productName, productPrice) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+    cart.items.push({ name: productName, price: productPrice });
+    cart.total += productPrice;
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${productName} added to the cart!`);
+}
+    </script>
+</body>
+</html>

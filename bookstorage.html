@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>DECORATIVE BOOK STORAGE</title>
+ <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Decorative Book Storages</h1>
+        <p>Multicolor bookstorages</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>GREY AND WHITE TEXTURE BOOK STORAGE</h3>
+            <img src="https://homsstore.com/cdn/shop/files/YFHD4618_400x.jpg?v=1693396488" alt="Bed Sheet 1">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="600">Price: 600 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('GREY AND WHITE TEXTURE BOOK STORAGE', 600)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>BLACK COAT BOOKSTORAGE</h3>
+            <img src="https://homsstore.com/cdn/shop/files/RKYN8522_400x.jpg?v=1693396675" alt="Bed Sheet 2">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="999">Price: 999 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('BLACK COAT BOOKSTORAGE', 999)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>WHITE FONT BOOK STORAGE</h3>
+            <img src="https://homsstore.com/cdn/shop/products/KXAL6362_400x.jpg?v=1681990772" alt="Bed Sheet 3">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="599">Price: 599 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('WHITE FONT BOOK STORAGE', 599)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>AUTUMN TREE BOOK DESIGN</h3>
+            <img src="https://homsstore.com/cdn/shop/products/FYWQ4758_400x.jpg?v=1681990768" alt="Bed Sheet 4">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="600">Price: 600 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('AUTUMN TREE BOOK DESIGN', 600)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>GOLDEN FONT BOOK STORAGE</h3>
+            <img src="https://homsstore.com/cdn/shop/files/RHSI6734_400x.jpg?v=1693396680" alt="Bed Sheet 5">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="799">Price: 799 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('GOLDEN FONT BOOK STORAGE', 799)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>BLACK LADY BOOK DESIGN</h3>
+            <img src="https://homsstore.com/cdn/shop/products/PAJV6713_400x.jpg?v=1681892751" alt="Bed Sheet 6">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="999">Price: 999 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('BLACK LADY BOOK DESIGN', 999)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+function addToCart(productName, productPrice) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+    cart.items.push({ name: productName, price: productPrice });
+    cart.total += productPrice;
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${productName} added to the cart!`);
+}
+    </script>
+    <h3>Unveil a World of Elegance with Our Decorative Storage Books</h3>
+    <h4>A Blend of Functionality and Aesthetic Appeal</h4>
+    <p>Introduce a unique touch to your home or office with our Decorative Storage Books. Not just for show, these pieces also offer practical storage solutions.</p>
+    <h4>Versatile and Stylish</h4>
+    <p>Perfect for any room, our Decorative Storage Books blend seamlessly with various decor styles, from classic to contemporary.</p>
+    <h4>Secret Storage</h4>
+    <p>Beyond their stunning exterior, each Decorative Storage Book opens to reveal a hidden compartment, perfect for storing keepsakes, jewelry, or important documents.</p>
+    <h4>Craftsmanship You Can Trust</h4>
+    <p>Made from high-quality materials, our Decorative Storage Books are built to last, offering a durable and stylish way to declutter your space.</p>
+    <h4>Key Features:</h4>
+    <ul>
+        <li><b>Dual-Purpose Design:</b> Serve as both elegant decorations and functional storage units.</li>
+        <li><b>High-Quality Construction:</b> Crafted from premium materials for extended durability.</li>
+        <li><b>Easy to Style:</b> Their timeless design complements any home or office decor.</li>
+        <li><b>Secret Compartments:</b> Ideal for stowing away valuables or keepsakes.</li>
+        <h4>Why Choose Our Decorative Storage Books?</h4>
+    </ul>
+    <ul>
+        <li>Elevate your interior design while cleverly organizing your space.</li>
+        <li>They make excellent gifts for book lovers, home decorators, or anyone looking to add a touch of elegance to their surroundings.</li>
+    </ul>
+    Transform your living or workspace with our Decorative Storage Books. Where sophistication meets functionality, these pieces are a must-have for anyone with an eye for design.
+</body>
+</html>

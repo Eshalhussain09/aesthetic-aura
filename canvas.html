@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WALL CANVAS ART</title>
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Wall Canvas Art</h1>
+        <p>Grace your home of wasted empty wall space with this minimalist yet modern canvas art.</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>ABSTRACT FRAMED WALL GALLERY</h3>
+            <img src="https://homsstore.com/cdn/shop/products/10_frames_set_1webul_2000x_f431b17e-55b1-4248-928e-f14c87df0ca3_400x.webp?v=1664958538" alt="Bed Sheet 1">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="4500">Price: 4500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ABSTRACT FRAMED WALL GALLERY', 4500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>BLACK AESTHETIC WALL</h3>
+            <img src="https://homsstore.com/cdn/shop/products/1st_beach_house_room_setupwebul_2000x_b9847d80-0325-4b1d-871a-61bab7896fc7_400x.webp?v=1664957470" alt="Bed Sheet 2">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="3500">Price: 3500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('BLACK AESTHETIC WALL', 3500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>WALL GALLERY SET</h3>
+            <img src="https://homsstore.com/cdn/shop/products/Picassoinspiredwallgallerysetwebul_2000x_8e1f55b6-754a-41f8-8a38-f26197a66f76_400x.webp?v=1664958980" alt="Bed Sheet 3">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="2500">Price: 2500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('WALL GALLERY SET', 2500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>DECORATIVE CANVAS</h3>
+            <img src="https://homsstore.com/cdn/shop/products/kitchen_quotation-webul_2000x_6ccaa815-b1df-48f7-9129-827982df2bdd_400x.webp?v=1664958782" alt="Bed Sheet 4">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="3999">Price: 3999 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('DECORATIVE CANVAS', 3999)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>DAISY DREAM GALLERY</h3>
+            <img src="https://homsstore.com/cdn/shop/products/matisse_2_1-matisse_2_4-matisse_2_5-matisse_2_6-matisse_2_3wowebul_2000x_b4039aef-7c39-40f4-b1e1-6410b3932357_400x.webp?v=1664957209" alt="Bed Sheet 5">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="4999">Price: 4999 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('DAISY DREAM GALLERY, 4999)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>ABSTRACT BLACK GALLERY</h3>
+            <img src="https://homsstore.com/cdn/shop/products/blackabstractgallery_400x.jpg?v=1662983918" alt="Bed Sheet 6">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="5999">Price: 5999 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('ABSTRACT BLACK GALLERY', 5999)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+function addToCart(productName, productPrice) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+    cart.items.push({ name: productName, price: productPrice });
+    cart.total += productPrice;
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${productName} added to the cart!`);
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LANTERNS & CANDLES</title>
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Lanterns & Candles</h1>
+        <p>Decorative Lanterns & Candles</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>SHINNY GOLD CANDLE STAND</h3>
+            <img src="https://homsstore.com/cdn/shop/files/IMG_E1092_400x.jpg?v=1718364735" alt="Bed Sheet 1">
+            <div class="product-details">
+                <div class="product-price" data-price="10000">Price: 10,000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('SHINNY GOLD CANDLE STAND', 10000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>TRIANGULAR SHAPE CANDLE</h3>
+            <img src="https://homsstore.com/cdn/shop/files/IMG_1080_400x.jpg?v=1718344513" alt="Bed Sheet 2">
+            <div class="product-details">
+                <div class="product-price" data-price="8500">Price: 8500 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('TRIANGULAR SHAPE CANDLE', 8500)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>GOLDEN CRYSTEL CANDLE</h3>
+            <img src="https://homsstore.com/cdn/shop/files/1000052683_400x.png?v=1718365810" alt="Bed Sheet 3">
+            <div class="product-details">
+                <div class="product-price" data-price="5000">Price: 5000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('GOLDEN CRYSTEL CANDLE', 5000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>DECORATIVE LEAF CANDLE</h3>
+            <img src="https://homsstore.com/cdn/shop/files/1000052677_2000x.png?v=1718366026" alt="Bed Sheet 4">
+            <div class="product-details">
+                <div class="product-price" data-price="3000">Price: 3000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('DECORATIVE LEAF CANDLE', 3000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>SWING LARGE CANDLES</h3>
+            <img src="https://homsstore.com/cdn/shop/products/DSC_0336_507c5ca8-5db4-4c9b-b051-d9aa99953244_400x.JPG?v=1538569346" alt="Bed Sheet 5">
+            <div class="product-details">
+                <div class="product-price" data-price="1000">Price: 1000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('SWING LARGE CANDLES', 1000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>LED CANDLES</h3>
+            <img src="https://homsstore.com/cdn/shop/products/12pcs-Flameless-LED-candles-white-red-yellow-candle-shape-night-light-party-weeding-home-bedroom-decoration_1_400x.jpg?v=1533644840" alt="Bed Sheet 6">
+            <div class="product-details">
+                <div class="product-price" data-price="700">Price: 700 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('LED CANDLES', 700)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+function addToCart(productName, productPrice) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+    cart.items.push({ name: productName, price: productPrice });
+    cart.total += productPrice;
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${productName} added to the cart!`);
+}
+    </script>
+</body>
+</html>

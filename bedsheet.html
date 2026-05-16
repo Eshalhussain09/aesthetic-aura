@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Premium Bed Sheets</title>
+ <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Premium BedSheets</h1>
+        <p>Decorative BedSheets</p>
+    </div>
+    <div class="products">
+        <div class="product">
+            <h3>MULTI COLOR BEDSHEET</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz-BcUzAglYsGmNlZPsbt1KuAft_42Fr2CHw&s" alt="Bed Sheet 1">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="2000">Price: 2000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('MULTI COLOR BEDSHEET', 2000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>FLORAL BLACK BEDSHEETS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs3rA3AbZYcdSEye2Xjhx2dF5mHQDwWkgYBw&s" alt="Bed Sheet 2">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="5000">Price: 5000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('FLORAL BLACK BEDSHEETS', 5000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>VIBRANT COLOR BEDSHEETS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQprlRreHpTBUj8xBWSfTuXHwBmFbUiRLRf7g&sJPEG" alt="Bed Sheet 3">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="3000">Price: 3000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('VIBRANT COLOR BEDSHEETS', 3000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>FLORAL PATTERN BEDSHEETS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzdI6q2j4k3PtggZ7U3FTDsDiAUjFT-4vpgg&s" alt="Bed Sheet 4">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="1200">Price: 1200 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('FLORAL PATTERN BEDSHEETS', 1200)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>TRI LINES BEDSHEETS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTNG4eDv8px9QRecSV96WoxZIP_Jx34G35AQ&s" alt="Bed Sheet 5">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="7000">Price: 7000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('TRI LINES BEDSHEETS', 7000)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>VIVID RICH BEDSHEETS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6hdeXPa6COmFTBP0HnDNWcWBQrUPCCG8MTA&s" alt="Bed Sheet 6">
+            <div class="sale-badge">SALE</div>
+            <div class="product-details">
+                <div class="product-price" data-price="6000">Price: 6000 Rs</div>
+            </div>
+            <button class="cart-button" onclick="addToCart('VIVID RICH BEDSHEETS', 6000)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+ function addToCart(productName, productPrice) {
+     let cart = JSON.parse(localStorage.getItem('cart')) || { items: [], total: 0 };
+     cart.items.push({ name: productName, price: productPrice });
+     cart.total += productPrice;
+
+     localStorage.setItem('cart', JSON.stringify(cart));
+
+     alert(`${productName} added to the cart!`);
+ }
+    </script>
+    <p>
+        Floral Blue Percale Pillow Cases (Pair)Floral Blue Percale Pillow Cases (Pair) bed-sheets
+        Floral Blue Percale Pillow Cases (Pair)
+        Rs.999.00 Rs.1,400.00
+        Quick View
+        Sale
+        Looking for premium quality bedsheets online in Pakistan? Look no further than Homsstore! Our online store delivers all across Pakistan, including major cities like Lahore, Karachi, and Islamabad.
+    </p>
+    <p>
+        We pride ourselves on being the bedsheets online brand in Pakistan, offering a wide range of bedsheets for sale with up to 50% off and free delivery. From cotton to percale, our bedding sheets are made from the finest materials to ensure long-lasting durability and exceptional comfort.
+    </p>
+    <p>
+        Our collection includes Bedsheets, Bed Sets, Pillow Cases in different modern designs to suit every taste and preference. Whether you prefer bold and bright colors or more subtle shades, we have something for everyone. We also offer a variety of sizes, including double bedsheets in king size and queen size, as well as single bedsheets.
+    </p>
+    <p>
+        Looking for unique bed sheets designs and ideas? Check out our modern, traditional, contemporary and 3D bedsheets that bring a whole new level of depth and dimension to your bedding. We also have bedding sheets with beautiful embroidery designs to add an elegant touch to your bedroom decor.
+    </p>
+    <p>
+        At Homsstore, we take pride in being one of the top Pakistani bed sheets online brand. Our bedding sheets are perfect for adding a touch of luxury to your home without breaking the bank. So why wait? Shop now for the best bed sheets online in Pakistan and elevate your sleep experience today!
+    </p>
+</body>
+</html>
